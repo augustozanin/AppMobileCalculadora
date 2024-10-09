@@ -1,11 +1,14 @@
 import { StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 
-const Input = ({pergunta}) => {
+const Input = ({pergunta, valor, setValor}) => {
   return (
     <View style={styles.view}>
        <Text style={styles.text}>{pergunta}</Text>
-      <TextInput keyboardType='numeric' style={styles.input}></TextInput>
+      <TextInput keyboardType='numeric' style={styles.input}
+        value={valor}
+        onChangeText={setValor}
+      ></TextInput>
     </View>
   )
 }

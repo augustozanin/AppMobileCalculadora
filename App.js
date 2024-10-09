@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './pages/Home';
 import Calcula from './pages/Calcula';
 
+const Stack = createStackNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>

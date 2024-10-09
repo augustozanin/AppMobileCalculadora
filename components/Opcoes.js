@@ -1,9 +1,7 @@
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native'
 import React, {useState} from 'react'
 
-const Opcoes = () => {
-    const [valor_botao, setValorBotao]= useState(null)
-
+const Opcoes = ({setValorBotao, valorBotao}) => {
     function DefinirOperacao(valor){
         if (valor == '+'){
             setValorBotao('SOMA')
@@ -39,12 +37,7 @@ const Opcoes = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.centralizaElemnentos}>
-        <Text>Operação Escolhida: {valor_botao}</Text>
-      </View>
-      <View>
-        <TouchableOpacity style={styles.botaoEfetuaCalculo} onPress={() => navigation.navigate('Calcula', )}>
-            <Text>Efetuar Cálculo</Text>
-        </TouchableOpacity>
+        <Text>Operação Escolhida: {valorBotao}</Text>
       </View>
     </View>
   )
@@ -69,11 +62,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#d3d3d3",
         alignItems: "center",
         marginLeft: "1%"
-    },
-    botaoEfetuaCalculo:{
-        backgroundColor: "#d3d3d3",
-        alignItems: "center",
-        marginTop: "10%"
     },
     centralizaElemnentos: {
         alignItems: "center"
