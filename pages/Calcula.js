@@ -33,12 +33,16 @@ export default function Calcula({ route }) {
 
   return (
     <View style={styles.container}>
-      <Titulo titulo_desejado="Trabalho 01 - Cálculos"/>
-      <Text>Valor 1: {primeiroValor}</Text>
-      <Text>Valor 2: {segundoValor}</Text>
-      <Text>Operação: {valorBotao}</Text>
-      <Text>Cálculo: {calculo}</Text>
-      <Text>Resultado: {resultado}</Text>
+      <View style={styles.tituloContainer}>
+        <Titulo titulo_desejado="Trabalho 01 - Cálculos"/>
+      </View>
+      <View style={styles.resultadoContainer}>
+        <Text style={styles.textos}>Valor 1: {primeiroValor}</Text>
+        <Text style={styles.textos}>Valor 2: {segundoValor}</Text>
+        <Text style={styles.textos}>Operação: {valorBotao}</Text>
+        <Text style={styles.textos}>Cálculo: {calculo}</Text>
+        <Text style={styles.textos}>Resultado: {resultado}</Text>
+      </View>
     </View>
   )
 }
@@ -47,7 +51,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+  },
+  textos:{
+    fontSize: 20,
+  },
+  tituloContainer: {
+    alignItems: 'center', 
+  },
+  resultadoContainer: {
+    alignItems: 'flex-start', 
+    paddingHorizontal: 20, 
   }
+
 });
